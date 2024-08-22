@@ -1,0 +1,272 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2022-02-21 15:16:08.391586",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "naming_series",
+  "subject",
+  "column_break_2",
+  "priority",
+  "test_type",
+  "column_break_1vbke",
+  "estimated_work",
+  "parent_test_cases",
+  "section_break_3",
+  "project",
+  "project_name",
+  "column_break_xck8h",
+  "task",
+  "task_subject",
+  "column_break_5",
+  "section_break_20",
+  "result",
+  "column_break_6qbkx",
+  "expected_result",
+  "more_info_section",
+  "amended_from",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TC-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Test Type",
+   "options": "\nRequirement Test\nUnit Test\nNon Regression",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "parent_test_cases.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Test Case",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Tab Break",
+   "label": "Testing Info"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Rating",
+   "label": "Priority",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Project Details"
+  },
+  {
+   "fieldname": "estimated_work",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Estimated Work",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Test Case",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parent_test_cases",
+   "fieldtype": "Link",
+   "label": "Parent Test Cases",
+   "options": "Test Case"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Test Manual"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Text Editor",
+   "label": "Steps to follow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1vbke",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xck8h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "task.subject",
+   "fieldname": "task_subject",
+   "fieldtype": "Data",
+   "label": "Task Subject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "column_break_6qbkx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_result",
+   "fieldtype": "Text Editor",
+   "label": "Expected Result",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2024-02-13 11:46:14.229923",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Test Case",
+ "naming_rule": "By \"Naming Series\" field",
+ "nsm_parent_field": "parent_test_cases",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "subject,project,task",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject",
+ "track_changes": 1,
+ "track_seen": 1
+}

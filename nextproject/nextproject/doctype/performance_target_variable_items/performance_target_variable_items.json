@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-17 12:34:12.542075",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "energy_point_rule",
+  "column_break_qrqs",
+  "points",
+  "column_break_plkv",
+  "reference_document_type",
+  "target_info_section",
+  "annual_target",
+  "column_break_zdkd",
+  "weightage_"
+ ],
+ "fields": [
+  {
+   "fieldname": "energy_point_rule",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Energy Point Rule",
+   "options": "Energy Point Rule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qrqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "energy_point_rule.points",
+   "fieldname": "points",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Points Per Event (for reference only)"
+  },
+  {
+   "fieldname": "column_break_plkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "energy_point_rule.reference_doctype",
+   "fieldname": "reference_document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_info_section",
+   "fieldtype": "Section Break",
+   "label": "Target Info"
+  },
+  {
+   "fieldname": "annual_target",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Annual Target",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zdkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weightage_",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Weightage (%)",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-18 21:01:57.042778",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Performance Target Variable Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

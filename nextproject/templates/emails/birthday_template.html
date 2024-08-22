@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        /* Add your global styles here */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative; /* Make container relative */
+        }
+
+        .main-container {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .main-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .heading {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: fantasy;
+            position: absolute;
+            top: 9%;
+            left: 50%;
+            font-weight: 600;
+            transform: translate(-50%, -12%);
+        }
+
+        .profile {
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 54%;
+            left: 47%;
+            padding: 5px;
+            width: 235px;
+            max-height: 284px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-container">
+            <img src="{{frappe.get_doc('Email Template Setting').bg}}"/>
+            <h1 id="name" class="heading">{{doc.employee_name}}</h1>
+            <img src="{{frappe.get_url()}}/{{doc.image}}" class="profile"/>
+        </div>
+    </div>
+</body>
+
+</html>

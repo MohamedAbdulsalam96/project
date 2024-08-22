@@ -1,0 +1,545 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-23 18:08:36.034392",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_f6ocb",
+  "project",
+  "project_name",
+  "attach_plan_sheet",
+  "column_break_ejvma",
+  "date",
+  "project_lead",
+  "project_lead_name",
+  "column_break_rev2e",
+  "primary_consultant",
+  "primary_consultant_name",
+  "status",
+  "column_break_js59t",
+  "meeting_host",
+  "host_name",
+  "company",
+  "meeting_details_section",
+  "meeting_type",
+  "meeting_date",
+  "column_break_zoool",
+  "meeting_subject",
+  "duration",
+  "column_break_wqrgf",
+  "agenda",
+  "notes_section",
+  "meeting_notes",
+  "column_break_7cz4o",
+  "actions_items",
+  "more_info_section",
+  "amended_from",
+  "attendees_info_tab",
+  "send_calendar_invite",
+  "online_meeting_link",
+  "count_daily",
+  "interval_year",
+  "select_date",
+  "year_count",
+  "monthly_date",
+  "month_count",
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "count_week",
+  "column_break_aoyxd",
+  "invite_send",
+  "meeting_scheduled_time",
+  "month",
+  "select_month",
+  "send_an_email_reminder_in_the_morning",
+  "repeat_this_event",
+  "all_day",
+  "sync_with_google_calendar",
+  "section_break_cpv52",
+  "pmo_meeting_attendees",
+  "customer",
+  "risk_details_tab",
+  "any_risk",
+  "pmo_meeting_risks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_f6ocb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_plan_sheet",
+   "fieldtype": "Attach",
+   "label": "Attach Plan Sheet"
+  },
+  {
+   "fieldname": "column_break_ejvma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_lead",
+   "fieldname": "project_lead",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Lead",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_lead_name",
+   "fieldname": "project_lead_name",
+   "fieldtype": "Data",
+   "label": "Project Lead Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rev2e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.primary_consultant",
+   "fieldname": "primary_consultant",
+   "fieldtype": "Link",
+   "label": "Primary Consultant",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.primary_consultant_name",
+   "fieldname": "primary_consultant_name",
+   "fieldtype": "Data",
+   "label": "Primary Consultant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_js59t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meeting_host",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Meeting Host",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "meeting_host.full_name",
+   "fieldname": "host_name",
+   "fieldtype": "Data",
+   "label": "Host Name"
+  },
+  {
+   "fetch_from": "project.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Meeting Details"
+  },
+  {
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "label": "Meeting Type",
+   "options": "\nDaily (Planned)\nWeekly (Planned)\nMonthly (Planned)\nProject Execution\nAd Hoc (Un-Planned)\nCustomer Requested\nRisk Discussion\nProject Go-Live\nSupport Handover",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_date",
+   "fieldtype": "Datetime",
+   "label": "Meeting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zoool",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meeting_subject",
+   "fieldtype": "Data",
+   "label": "Meeting Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Duration",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wqrgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agenda",
+   "fieldtype": "Small Text",
+   "label": "Agenda",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "meeting_notes",
+   "fieldtype": "Text Editor",
+   "label": "Meeting Notes",
+   "mandatory_depends_on": "eval:doc.status=='Completed'"
+  },
+  {
+   "fieldname": "column_break_7cz4o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "actions_items",
+   "fieldtype": "Text Editor",
+   "label": "Actions Items",
+   "mandatory_depends_on": "eval:doc.status=='Completed'"
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PMO Meetings",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendees_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Attendees Info"
+  },
+  {
+   "fieldname": "send_calendar_invite",
+   "fieldtype": "Button",
+   "label": "Send Calendar Invite"
+  },
+  {
+   "fieldname": "column_break_aoyxd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "invite_send",
+   "fieldtype": "Check",
+   "label": "Invite Send",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_cpv52",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pmo_meeting_attendees",
+   "fieldtype": "Table",
+   "label": "PMO Meeting Attendees",
+   "options": "PMO Meeting Attendees",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "risk_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Risk Details"
+  },
+  {
+   "depends_on": "eval:doc.any_risk==1;",
+   "fieldname": "pmo_meeting_risks",
+   "fieldtype": "Table",
+   "label": "PMO Meeting Risks",
+   "mandatory_depends_on": "eval:doc.any_risk==1;",
+   "options": "PMO Meeting Risks"
+  },
+  {
+   "default": "0",
+   "fieldname": "any_risk",
+   "fieldtype": "Check",
+   "label": "Any Open Risks?"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "PMM.DD..MM..YY..##",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nCompleted\nCancelled",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "online_meeting_link",
+   "fieldtype": "Data",
+   "label": "Online Meeting Link"
+  },
+  {
+   "fieldname": "meeting_scheduled_time",
+   "fieldtype": "Select",
+   "label": "Meeting Scheduled Time",
+   "options": "\nDaily\nWeekly\nMonthly\nYearly"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\"",
+   "fieldname": "interval_year",
+   "fieldtype": "Data",
+   "label": "Interval Year"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\"",
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\"",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\"",
+   "fieldname": "select_date",
+   "fieldtype": "Select",
+   "label": "Select Date",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\"",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Monthly\"",
+   "fieldname": "select_month",
+   "fieldtype": "Select",
+   "label": "Month Interval",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Monthly\"",
+   "fieldname": "monthly_date",
+   "fieldtype": "Select",
+   "label": "Monthly Date",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Monthly\"",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "sunday",
+   "fieldtype": "Check",
+   "label": "Sunday"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "monday",
+   "fieldtype": "Check",
+   "label": "Monday"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "tuesday",
+   "fieldtype": "Check",
+   "label": "Tuesday"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "wednesday",
+   "fieldtype": "Check",
+   "label": "Wednesday"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "thursday",
+   "fieldtype": "Check",
+   "label": "Thursday"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "friday",
+   "fieldtype": "Check",
+   "label": "Friday"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "saturday",
+   "fieldtype": "Check",
+   "label": "Saturday"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\";",
+   "fieldname": "count_week",
+   "fieldtype": "Int",
+   "label": "Count Week",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Weekly\""
+  },
+  {
+   "default": "0",
+   "fieldname": "send_an_email_reminder_in_the_morning",
+   "fieldtype": "Check",
+   "label": " Send an email reminder in the morning"
+  },
+  {
+   "default": "0",
+   "fieldname": "repeat_this_event",
+   "fieldtype": "Check",
+   "label": "Repeat this Event"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_day",
+   "fieldtype": "Check",
+   "label": " All Day"
+  },
+  {
+   "default": "0",
+   "fieldname": "sync_with_google_calendar",
+   "fieldtype": "Check",
+   "label": "Sync with Google Calendar"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Monthly\";",
+   "fieldname": "month_count",
+   "fieldtype": "Int",
+   "label": "Month Count",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Monthly\";"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\";",
+   "fieldname": "year_count",
+   "fieldtype": "Int",
+   "label": "Year Count",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Yearly\";"
+  },
+  {
+   "depends_on": "eval:doc.meeting_scheduled_time==\"Daily\";",
+   "fieldname": "count_daily",
+   "fieldtype": "Int",
+   "label": "Count Daily",
+   "mandatory_depends_on": "eval:doc.meeting_scheduled_time==\"Daily\";"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2024-06-28 14:47:22.626504",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "PMO Meetings",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

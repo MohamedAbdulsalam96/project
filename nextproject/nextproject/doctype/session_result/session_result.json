@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-25 12:25:28.877628",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "test_case",
+  "section_break_alyvf",
+  "steps_followed",
+  "column_break_u59vd",
+  "expected_result",
+  "section_break_acaya",
+  "actual_result",
+  "column_break_omylx",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Test Case",
+   "options": "Test Case"
+  },
+  {
+   "fetch_from": "test_case.expected_result",
+   "fieldname": "expected_result",
+   "fieldtype": "Text Editor",
+   "label": "Expected Result",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_result",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Actual Result"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remark"
+  },
+  {
+   "fetch_from": "test_case.result",
+   "fieldname": "steps_followed",
+   "fieldtype": "Text Editor",
+   "label": "Steps Followed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_alyvf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_u59vd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_omylx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_acaya",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-11 23:07:18.087821",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Session Result",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

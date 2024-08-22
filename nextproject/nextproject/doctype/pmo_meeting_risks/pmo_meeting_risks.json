@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-23 17:18:57.472147",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk",
+  "possible_project_delay",
+  "column_break_u7mmh",
+  "impact",
+  "likelihood",
+  "risk_rating",
+  "column_break_ue4yy",
+  "reporters_name",
+  "status",
+  "section_break_xg6yg",
+  "risk_description",
+  "column_break_mds7j",
+  "mitigation_plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "risk",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Risk",
+   "options": "Project Risk",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "risk.delivery_delayed",
+   "fieldname": "possible_project_delay",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Possible Project Delay?",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_u7mmh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "risk.impact",
+   "fieldname": "impact",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Impact",
+   "options": "0\n1\n2\n3\n4\n5",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "risk.likelihood",
+   "fieldname": "likelihood",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Likelihood",
+   "options": "0\n1\n2\n3\n4\n5",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "risk.risk_rating",
+   "fieldname": "risk_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Rating",
+   "options": "0\n1\n2\n3\n4\n5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ue4yy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "risk.reporter_name",
+   "fieldname": "reporters_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reporter's Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "risk.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xg6yg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "risk.risk_description",
+   "fieldname": "risk_description",
+   "fieldtype": "Text Editor",
+   "label": "Risk Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mds7j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "risk.mitigation_plan",
+   "fieldname": "mitigation_plan",
+   "fieldtype": "Text Editor",
+   "label": "Mitigation Plan",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-03 16:11:23.489497",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "PMO Meeting Risks",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-09 13:34:04.700921",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assumptions_preconditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "assumptions_preconditions",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Assumptions & Preconditions"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-09 13:58:48.245207",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Assumptions Preconditions",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

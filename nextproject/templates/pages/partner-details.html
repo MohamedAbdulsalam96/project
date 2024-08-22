@@ -1,0 +1,937 @@
+<!-- partner-details.html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    {% extends "templates/web.html" %}
+
+    {% block title %} {{ title }} {% endblock %}
+    
+    
+    
+    
+    {% block page_content %}
+
+    <!-- <link rel="stylesheet" href="partner-details.css"> -->
+
+
+</head>
+<style>
+
+.page_content{
+    margin:0;
+padding:0;
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+
+    box-sizing: border-box;
+   
+}
+ h4{
+
+width: 100%;
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+color: var(--gray-600, #817e7e);
+font-size: 14px;
+font-weight: 420;
+
+}
+
+h3{
+
+
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+color: var(--gray-800, #817e7e);
+font-size: 16px;
+font-weight: bold;
+
+}
+a{
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+    
+font-size: 14px;
+font-weight: 420;
+text-decoration: none;
+height: fit-content;
+left: auto;
+letter-spacing: 0.28px;
+line-height: 150%;
+min-width: 30px;
+position: static;
+top: auto;
+width: fit-content;
+}
+body{
+margin:0;
+padding:0;
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+
+    box-sizing: border-box;
+    line-height: 1.8;
+}
+p{
+    font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+    color: var(--gray-800, #383838);
+font-size: 14px;
+font-weight: 420;
+height: fit-content;
+left: auto;
+letter-spacing: 0.28px;
+line-height: 150%;
+min-width: 30px;
+position: static;
+top: auto;
+width: fit-content;
+}
+
+button{
+    font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+}
+#partner-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.phnPara{
+line-height: 0.5rem;
+}
+h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+
+}
+
+.partner-section {
+    margin-bottom: 20px;
+}
+
+.partner-section h2 {
+    margin-top: 0;
+}
+
+.partner-section p {
+    margin-top: 0;
+}
+
+.partner-links{
+    display: flex;
+flex-wrap: wrap;
+gap: 0%;
+width: 100%;
+height: 40px;
+position: relative;
+object-fit: contain;
+margin-top: 1%;
+}
+/* .partner-links a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: blue;
+} */
+
+@media screen and (max-width: 600px) {
+    #partner-details-container {
+        padding: 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+#imageContainer{
+    width: 100%;
+display: flex;
+justify-content: space-between;
+height: 55px;
+
+position: relative;
+object-fit: contain;
+margin-top: 0%;
+}
+.partner-logoImg{    
+    width: 52%;
+    height: 95%;
+    object-fit: contain;
+    margin-top: -2%;
+}
+
+.btnsII{
+    border: none;
+width: 20%;
+height: 61%;
+
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+    color: var(--gray-600, #817e7e);
+font-size: 14px;
+font-weight: 420;
+
+
+border-radius: 6px;
+cursor: pointer;
+
+}
+
+
+.btns{
+    border: none;
+width: 20%;
+height: 61%;
+
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+color: var(--gray-600, #817e7e);
+font-size: 14px;
+font-weight: 420;
+
+border-radius: 6px;
+cursor:pointer;
+
+}
+.emailBtn{
+    border: none;
+    width: 25%;
+    height: 35px;
+    background-color: black;
+    color: white;
+    
+    font-size: 14px;
+    border-radius: 10px;
+    cursor:pointer;
+
+   
+
+}
+.emailBtn i{
+font-size: 14px;
+font-family: Roboto;
+color: white;
+}
+
+.verified-checkbox{
+   
+    width:15%;
+    height: 78%;
+    object-fit: contain;
+    margin-top:-1%;
+    
+}
+
+
+#addressDiv{
+    border-top: 1px solid rgb(231, 220, 220);
+max-width: 800px;
+margin: 0 auto;
+padding: 0px 20px 20px 20px;
+display: flex;
+flex-wrap: wrap;
+column-gap: 1%;
+row-gap: 0%;
+height: 70%;
+}
+/* #addressDiv > div{
+   
+    width: 30%;
+    text-align: start;
+    font-family: Roboto;
+    font-size: 14px;
+border-radius: 5px;
+   
+
+} */
+.web{
+   
+   width: 30%;
+   text-align: start;
+   font-family: Roboto;
+   font-size: 14px;
+border-radius: 5px;
+  
+
+}
+.email{
+   
+   width: 30%;
+   text-align: start;
+   font-family: Roboto;
+   font-size: 14px;
+border-radius: 5px;
+  
+
+}
+.phone{
+   
+   width: 30%;
+   text-align: start;
+   font-family: Roboto;
+   font-size: 14px;
+border-radius: 5px;
+  
+
+}
+.address{
+   
+   width: 30%;
+   text-align: start;
+   font-family: Roboto;
+   font-size: 14px;
+border-radius: 5px;
+
+  
+
+}
+.domain{
+    width: 60%;
+    text-align: start;
+    font-family: Roboto;
+    font-size: 14px;
+border-radius: 5px;
+   
+}
+
+#backHome{
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer;
+    font-family: Roboto;
+    max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+#home{
+    
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+   
+}
+#home > button{
+    border:none;
+    
+
+background: #F3F3F3;
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+    color: var(--gray-800, #4d4c4c);
+
+font-weight: 420;
+font-size: 12px;
+border-radius: 6px;
+cursor:pointer;
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+body{
+overflow-x: hidden;
+}
+a{
+        text-decoration: none;
+    }
+#partner-details-container {
+padding: 10px;
+}
+#countryHead{
+width: 100%;
+
+
+font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
+color: var(--gray-600, #817e7e);
+font-size: 14px;
+font-weight: 420;
+}
+
+.partner-links{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+row-gap: 10%;
+margin-top: 18%;
+}
+
+.partner-links a{
+flex: 0 0 60%; 
+font-size: 16px;
+
+
+}
+.verified-checkbox {
+width: 30%;
+height: 70%;
+object-fit: contain;
+}
+
+#addressDiv{
+width: 100%;
+margin-top: 5%;
+display: flex;
+flex-wrap: wrap;
+gap:0%;
+height: 70%;
+
+}
+
+/* Address container */
+#addressDiv > div {
+flex: 0 0 45%; 
+border: none;
+}
+.partner-logoImg {
+    width: 20%;
+    
+    height: 100%;
+object-fit: contain;
+margin-top: -1%;
+}
+
+/* Back button container */
+#home {
+margin: 0;
+padding: 12px 0px 0px 0px;
+width: 100%;
+
+
+}
+#home > button{
+width: 60%;
+font-size: 18px;
+}
+.partner-section{
+margin-top: 10%;
+}
+#imageContainer{
+width: 100%;
+display: flex;
+flex-direction: column;
+margin-top: -3%;
+
+}
+.emailBtn{
+width: 70%;
+font-size: 18px;
+}
+}
+@media screen and (max-width: 500px) {
+body{
+overflow-x: hidden;
+}
+a{
+        text-decoration: none;
+    }
+
+#partner-details-container {
+padding: 10px;
+}
+#countryHead{
+width: 100%;
+margin-bottom: -6%;
+}
+
+.partner-links{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+row-gap: 10%;
+margin-top: 20%;
+}
+/* Links container */
+.partner-links a {
+flex: 0 0 60%; 
+font-size: 16px;
+
+
+}
+.verified-checkbox {
+width: 30%;
+height: 70%;
+object-fit: contain;
+}
+#addressDiv{
+width: 100%;
+margin-top: 5%;
+display: flex;
+flex-wrap: wrap;
+gap:5%;
+height: 70%;
+
+}
+
+/* Address container */
+#addressDiv > div {
+flex: 0 0 50%; 
+border: none;
+}
+
+/* Back button container */
+#home {
+margin: 0;
+padding: 12px 0px 0px 0px;
+width: 100%;
+
+
+}
+#home > button{
+width: 60%;
+font-size: 16px;
+}
+.partner-section{
+margin-top: 10%;
+}
+#imageContainer{
+width: 100%;
+display: flex;
+flex-direction: column;
+margin-top: -3%;
+}
+.emailBtn{
+width: 70%;
+font-size: 16px;
+}
+}
+
+
+@media screen and (max-width: 400px) {
+/* Partner details container */
+#partner-details-container {
+padding: 5px;
+}
+.partner-links{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+row-gap: 10%;
+margin-top: 20%;
+}
+#home {
+margin: 0;
+padding: 10px 0px 0px 0px;
+width: 100%;
+
+
+}
+
+a{
+        text-decoration: none;
+    }
+#home > button{
+width: 65%;
+font-size: 16px;
+}
+.emailBtn{
+width: 75%;
+font-size: 16px;
+}
+#addressDiv{
+width: 100%;
+margin-top: 5%;
+display: flex;
+flex-wrap: wrap;
+gap:5%;
+height: 70%;
+
+}
+
+#addressDiv > div {
+flex: 0 0 60%;
+border: none; 
+}
+}
+
+@media screen and (max-width: 300px) {
+
+#partner-details-container {
+padding: 5px;
+}
+.partner-links{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+row-gap: 10%;
+margin-top: 40%;
+}
+a{
+        text-decoration: none;
+    }
+#home {
+margin: 0;
+padding: 10px 0px 0px 0px;
+width: 100%;
+
+
+}
+#home > button{
+width: 80%;
+font-size: 14px;
+}
+.emailBtn{
+width: 90%;
+font-size: 16px;
+}
+#addressDiv{
+width: 100%;
+margin-top: 5%;
+display: flex;
+flex-wrap: wrap;
+gap:5%;
+height: 70%;
+
+}
+
+
+#addressDiv > div {
+flex: 0 0 70%; 
+border: none;
+}
+}
+
+
+
+</style>
+
+
+   
+
+<body>
+    <div id="home">
+    <button id="back" >Go Back To Partner Page</button></div>
+    <div id="partner-details-container">
+        <div id="countyHead"></div>
+        <div id="imageContainer"></div>
+
+        
+       
+    </div>
+    <div id="addressDiv"></div>
+    <div>
+      
+    </div>
+
+    <script> 
+
+
+
+
+document.getElementById('back').addEventListener('click', () => {
+    window.location.href = '/partners/?'
+})
+
+
+
+
+document.addEventListener("DOMContentLoaded", async function() {
+   
+    async function displayPartnerDetails() {
+        const params = new URLSearchParams(window.location.search);
+        const partnerName = params.get('name');
+
+        try {
+            const response = await fetch(`/api/method/nextproject.api.sales_partner_details?name=${encodeURIComponent(partnerName)}`);
+            const data = await response.json();
+            const resData = data.message;
+            const partnerDetails = data.message.details;
+            // console.log('resData', resData)
+
+            // console.log('partnerDetails', partnerDetails)
+            const addressDetails = data.message.contact_and_address_details.address_details;
+            const phnDetails = data.message.contact_and_address_details;
+
+            // console.log("addressDetails",addressDetails)
+            // console.log('phnDetails', phnDetails)
+
+
+
+          
+
+            
+           
+            const partnerDetailsContainer = document.getElementById("partner-details-container");
+            const imageContainer = document.getElementById('imageContainer');
+            const countryContainer = document.getElementById('countyHead');
+            const addressContainer = document.getElementById('addressDiv')
+
+
+            const countryHeading = document.createElement("h4");
+            countryHeading.textContent = decodeURIComponent(partnerDetails.territory);
+            countryContainer.appendChild(countryHeading);
+
+            const nameHeading = document.createElement("h1");
+            nameHeading.textContent = decodeURIComponent(partnerDetails.name);
+            imageContainer.appendChild(nameHeading);
+
+
+
+            
+           
+            const logoImg = document.createElement("img");
+            logoImg.src = partnerDetails.logo;
+            logoImg.alt = partnerDetails.name;
+            logoImg.classList.add("partner-logoImg");
+            imageContainer.appendChild(logoImg);
+
+
+
+          
+
+
+
+
+            const linksDiv = document.createElement("div");
+            linksDiv.classList.add("partner-links");
+if (partnerDetails.partner_website) {
+const websiteLink = document.createElement("a");
+websiteLink.textContent = "Partner Website";
+websiteLink.classList.add('btns');
+websiteLink.href = partnerDetails.partner_website;
+websiteLink.target = "_blank"; 
+websiteLink.innerHTML = websiteLink.innerHTML + " " +  "&#8599; "; 
+linksDiv.appendChild(websiteLink);
+}
+
+
+
+if (partnerDetails.custom_attach_certificate) {
+const certificateLink = document.createElement("a");
+certificateLink.textContent = "View Certificate";
+certificateLink.classList.add('btnsII');
+certificateLink.href = partnerDetails.custom_attach_certificate;
+certificateLink.target = "_blank"; 
+certificateLink.innerHTML =certificateLink.innerHTML + "&#8599; "; 
+linksDiv.appendChild(certificateLink);
+}
+
+if (partnerDetails.custom_certified_partner === 1) {
+const verifiedCheckbox = document.createElement("img");
+// const sitePath = frappe.urllib.get_base_url()
+// verifiedCheckbox.src = sitePath+'/files/speech.mp3?timestamp='+uniqueTimestamp;
+verifiedCheckbox.src = "assets/nextproject/images/verified.jpeg";
+
+verifiedCheckbox.alt = "."
+verifiedCheckbox.classList.add("verified-checkbox");
+linksDiv.appendChild(verifiedCheckbox);
+}
+
+
+
+
+
+            
+
+            partnerDetailsContainer.appendChild(linksDiv);
+
+
+
+
+            if (partnerDetails.introduction !== undefined) {
+
+            const introductionDiv = document.createElement("div");
+            introductionDiv.classList.add("partner-section");
+    
+            const introductionParagraph = document.createElement("p");
+            introductionParagraph.textContent = partnerDetails.introduction;
+            
+            introductionDiv.appendChild(introductionParagraph);
+            partnerDetailsContainer.appendChild(introductionDiv);
+
+            }
+
+           else {
+
+const introductionDiv = document.createElement("div");
+introductionDiv.classList.add("partner-section");
+
+const introductionParagraph = document.createElement("p");
+introductionParagraph.textContent = "";
+
+introductionDiv.appendChild(introductionParagraph);
+partnerDetailsContainer.appendChild(introductionDiv);
+
+}
+            if (partnerDetails.description !== undefined) {
+          
+            const descriptionDiv = document.createElement("div");
+            descriptionDiv.classList.add("partner-section");
+           
+            const descriptionParagraph = document.createElement("p");
+            descriptionParagraph.innerHTML = `      ${partnerDetails.description}`;
+            
+            descriptionDiv.appendChild(descriptionParagraph);
+            partnerDetailsContainer.appendChild(descriptionDiv);
+            }
+            else {
+          
+          const descriptionDiv = document.createElement("div");
+          descriptionDiv.classList.add("partner-section");
+         
+          const descriptionParagraph = document.createElement("p");
+          descriptionParagraph.innerHTML = "";
+          
+          descriptionDiv.appendChild(descriptionParagraph);
+          partnerDetailsContainer.appendChild(descriptionDiv);
+          }
+
+
+
+
+            const emailButton = document.createElement('button');
+emailButton.classList.add('emailBtn');
+emailButton.textContent = 'Contact Partner';
+emailButton.innerHTML = "&#9993; " + " " +emailButton.innerHTML;
+
+
+
+
+
+partnerDetailsContainer.appendChild(emailButton);
+
+
+
+const addressData = addressDetails;
+
+
+const addressSection = document.createElement('div');
+const paraGraph = document.createElement('h3');
+paraGraph.textContent = 'Address';
+addressSection.classList.add('address');
+addressSection.appendChild(paraGraph);
+
+addressData.forEach((add) => {
+const addressLine = [];
+if (add.address_line1) addressLine.push(add.address_line1);
+if (add.address_line2) addressLine.push(add.address_line2);
+if (add.city) addressLine.push(add.city);
+if (add.pincode) addressLine.push(add.pincode);
+if (add.state) addressLine.push(add.state);
+if (add.country) addressLine.push(add.country);
+if (add.fax) addressLine.push(add.fax);
+if (add.tax_category) addressLine.push(add.tax_category);
+
+if (addressLine.length > 0) {
+const ai = document.createElement('p');
+ai.textContent = `${add.address_title} :- ${addressLine.join(', ')}`;
+addressSection.appendChild(ai);
+}
+});
+
+
+addressContainer.appendChild(addressSection);
+
+
+
+
+
+const phnData = phnDetails.phone_nos;
+const phoneSection = document.createElement('div');
+const phnGraph = document.createElement('h3')
+phnGraph.textContent = 'Phone'
+phoneSection.classList.add('phone');
+phoneSection.appendChild(phnGraph)
+
+phnData.forEach((phn) => {
+const p = document.createElement('p')
+p.classList.add('phnPara')
+p.textContent = phn;
+
+phoneSection.appendChild(p)
+
+})
+
+
+
+
+const EmailData = phnDetails.email_id
+
+const emailSection = document.createElement('div');
+const emailGraph = document.createElement('h3')
+emailGraph.textContent = 'Email'
+
+emailSection.classList.add('email');
+emailSection.appendChild(emailGraph)
+
+EmailData.forEach((email) => {
+const e = document.createElement('p')
+e.textContent = email;
+
+emailSection.appendChild(e)
+emailButton.addEventListener('click', function() {
+       
+        window.location.href = `mailto:${email}`;
+    });
+
+})
+
+
+
+
+
+const webSection = document.createElement('div');
+const webGraph = document.createElement('h3')
+const webLink = document.createElement('p')
+webLink.textContent =  partnerDetails.partner_website;
+
+webGraph.textContent = 'Website'
+webSection.classList.add('web');
+webSection.appendChild(webGraph)
+webSection.appendChild(webLink)
+
+
+addressContainer.appendChild(addressSection);
+addressContainer.appendChild(phoneSection);
+addressContainer.appendChild(emailSection);
+
+
+const domainData = partnerDetails.custom_domain;
+
+
+if (Array.isArray(domainData) && domainData.length > 0) {
+const domainSection = document.createElement('div');
+const domainGraph = document.createElement('h3');
+domainGraph.textContent = 'Domain Expertise';
+domainSection.classList.add('domain');
+domainSection.appendChild(domainGraph);
+
+
+const domainTextElement = document.createElement('p');
+domainTextElement.innerHTML = domainData.map(domain => {
+const span = document.createElement('span');
+span.textContent = domain.domain;
+span.style.backgroundColor = '#cae9f3';
+span.style.color = 'blue';
+span.style.padding = '0.1em 0.3em';
+span.style.borderRadius = '0.2em';
+return span.outerHTML;
+}).join(', ');
+
+domainSection.appendChild(domainTextElement);
+
+addressContainer.appendChild(domainSection);
+}
+
+
+addressContainer.appendChild(webSection);
+
+
+        } catch (error) {
+            console.error("Error fetching partner details:", error);
+        }
+    }
+
+    
+    displayPartnerDetails();
+});
+
+    
+    </script>
+
+</body>
+</html>
+
+{% endblock %}

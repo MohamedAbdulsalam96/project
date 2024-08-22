@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include nextproject *.css
+recursive-include nextproject *.csv
+recursive-include nextproject *.html
+recursive-include nextproject *.ico
+recursive-include nextproject *.js
+recursive-include nextproject *.json
+recursive-include nextproject *.md
+recursive-include nextproject *.png
+recursive-include nextproject *.py
+recursive-include nextproject *.svg
+recursive-include nextproject *.txt
+recursive-exclude nextproject *.pyc

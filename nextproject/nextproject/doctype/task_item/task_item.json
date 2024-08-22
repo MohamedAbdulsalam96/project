@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-23 18:51:55.644117",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_id",
+  "task_subject",
+  "task_expected_start_date",
+  "revise_start_date",
+  "task_expected_end_date",
+  "revise_end_date",
+  "rectification_plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task Id",
+   "options": "Task"
+  },
+  {
+   "fetch_from": "task_id.subject",
+   "fieldname": "task_subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Subject"
+  },
+  {
+   "fetch_from": "task_id.exp_start_date",
+   "fieldname": "task_expected_start_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Expected Start Date"
+  },
+  {
+   "fieldname": "revise_start_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Revise Start Date"
+  },
+  {
+   "fetch_from": "task_id.exp_end_date",
+   "fieldname": "task_expected_end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Expected End Date"
+  },
+  {
+   "fieldname": "revise_end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Revise End Date"
+  },
+  {
+   "fieldname": "rectification_plan",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Rectification plan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-18 16:30:42.768401",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Task Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

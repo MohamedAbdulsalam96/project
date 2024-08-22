@@ -1,0 +1,501 @@
+{
+ "charts": [
+  {
+   "chart_name": "Resource Allocation Summary",
+   "label": "Resource Allocation Summary"
+  },
+  {
+   "chart_name": "Milestone Sign Off",
+   "label": "Milestone Sign Off"
+  }
+ ],
+ "content": "[{\"id\":\"60W7016vIb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">PMIS</span>\",\"col\":12}},{\"id\":\"RgwScsH2iH\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Resource Allocation Summary\",\"col\":6}},{\"id\":\"rNN80TUTs-\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Milestone Sign Off\",\"col\":6}},{\"id\":\"nf-OIte_Bm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KSEcudzql2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Your Shortcuts</span><br>\",\"col\":12}},{\"id\":\"T7_vQysreu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"PMIS Dashboard\",\"col\":3}},{\"id\":\"Zl-nSjnb6Y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"id\":\"0uKEYiBRPL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Allocation Bill\",\"col\":3}},{\"id\":\"ln-G7AL_ib\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Risk\",\"col\":3}},{\"id\":\"tkLmWVV8Qf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet Ledger\",\"col\":3}},{\"id\":\"JQT09S1Nyq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Vs Timesheet\",\"col\":3}},{\"id\":\"oGEN9Rprtg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Summary\",\"col\":3}},{\"id\":\"3Tax8VV3ef\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet Defaulter\",\"col\":3}},{\"id\":\"8_TsVg6c-i\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"7o-3t_0LEM\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\" style=\\\"\\\"><a href=\\\"/app/timesheet-approval\\\">Timesheet Approval</a></span>\",\"col\":4}},{\"id\":\"dCL877jQX3\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\" style=\\\"\\\"><a href=\\\"/app/timesheet-filling\\\">Timesheet Filling</a></span>\",\"col\":4}},{\"id\":\"IEUcHBgfiX\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\" style=\\\"\\\"><a href=\\\"/app/query-report/Resource%20Allocation\\\">Resource Allocation</a></span>\",\"col\":4}},{\"id\":\"BwrKTJjzkZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Lists</b></span>\",\"col\":12}},{\"id\":\"iTYqv0_869\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Weekly Timesheet Defaults\",\"col\":4}},{\"id\":\"VDLGMWE71k\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Project Risk\",\"col\":4}},{\"id\":\"lSczYRl_EP\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Weekly Resource Allocation\",\"col\":4}},{\"id\":\"VKq1Gq-OU3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Project Information Management System</b></span>\",\"col\":12}},{\"id\":\"y5_481EqUf\",\"type\":\"card\",\"data\":{\"card_name\":\"Resource Allocation\",\"col\":4}},{\"id\":\"_GPqQ4t2D2\",\"type\":\"card\",\"data\":{\"card_name\":\"Timesheet\",\"col\":4}},{\"id\":\"RUY7bAL840\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"z2bLivXwkT\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Essentials\",\"col\":4}},{\"id\":\"Ci8ybKSyT1\",\"type\":\"card\",\"data\":{\"card_name\":\"Performance Variable\",\"col\":4}},{\"id\":\"9YzvtCD_gm\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Testing\",\"col\":4}},{\"id\":\"ZzuwVl1iR9\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"etCrkncFmK\",\"type\":\"card\",\"data\":{\"card_name\":\"Check Daily Scrum\",\"col\":4}},{\"id\":\"WaMvLWCbYO\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Revenue Projection\",\"col\":4}}]",
+ "creation": "2023-06-28 14:56:27.607649",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "insert-above",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "PMIS",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timesheet",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timesheet Filling",
+   "link_count": 0,
+   "link_to": "Timesheet Filling",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timesheet Defaulter",
+   "link_count": 0,
+   "link_to": "Timesheet Defaulter",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timesheet Approval",
+   "link_count": 0,
+   "link_to": "Timesheet Approval",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Essentials",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Risk",
+   "link_count": 0,
+   "link_to": "Project Risk",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Milestone Sign Off",
+   "link_count": 0,
+   "link_to": "Milestone Sign Off",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Variable",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Performance Target Variable Report",
+   "link_count": 0,
+   "link_to": "Performance Target Variable Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Bonus",
+   "link_count": 0,
+   "link_to": "Performance Bonus",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Target Variable",
+   "link_count": 0,
+   "link_to": "Performance Target Variable",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Check Daily Scrum",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Scrum",
+   "link_count": 0,
+   "link_to": "Daily Scrum",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scrum Attendance",
+   "link_count": 0,
+   "link_to": "Scrum Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Testing",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Test Session",
+   "link_count": 0,
+   "link_to": "Test Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Test Cases",
+   "link_count": 0,
+   "link_to": "Test Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timesheet Settings",
+   "link_count": 0,
+   "link_to": "Timesheet Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Product Version",
+   "link_count": 0,
+   "link_to": "Product Version",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Key Reports",
+   "link_count": 8,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Timesheet Ledger",
+   "link_count": 0,
+   "link_to": "Timesheet Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Attendance vs Timesheet",
+   "link_count": 0,
+   "link_to": "Attendance vs Timesheet",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Status",
+   "link_count": 0,
+   "link_to": "Project Status",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Resource Wise Billable Hrs",
+   "link_count": 0,
+   "link_to": "Resource Wise Billable Hrs",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Project Summary",
+   "link_count": 0,
+   "link_to": "Employee Project Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Employee Attendance Report",
+   "link_count": 0,
+   "link_to": "Employee Attendance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Profitability",
+   "link_count": 0,
+   "link_to": "Project Profitability",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Hours Utilization Based On Timesheet",
+   "link_count": 0,
+   "link_to": "Employee Hours Utilization Based On Timesheet",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Revenue Projection",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Revenue Projection",
+   "link_count": 0,
+   "link_to": "Project Revenue Projection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Revenue Projection Vs Actual Report",
+   "link_count": 0,
+   "link_to": "Project Revenue Projection vs Actual",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Revenue Settings",
+   "link_count": 0,
+   "link_to": "Project Revenue Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Allocation",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Allocation",
+   "link_count": 0,
+   "link_to": "Resource Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Allocation Bill",
+   "link_count": 0,
+   "link_to": "Project Allocation Bill",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Resource Allocation Report",
+   "link_count": 0,
+   "link_to": "Resource Allocation",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Resource wise Project Allocation",
+   "link_count": 0,
+   "link_to": "Resource wise Project Allocation",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Under Utilized Resources",
+   "link_count": 0,
+   "link_to": "Under Utilized Resources",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-07-16 16:55:04.347950",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "PMIS",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Projects",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Resource Allocation",
+   "label": "Weekly Resource Allocation",
+   "quick_list_filter": "{\"date\":[\"Timespan\",\"this week\"]}"
+  },
+  {
+   "document_type": "Timesheet Defaulter",
+   "label": "Weekly Timesheet Defaults",
+   "quick_list_filter": "{\"date_for_which_hours_are_less\":[\"Timespan\",\"this week\"]}"
+  },
+  {
+   "document_type": "Project Risk",
+   "label": "Project Risk"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Projects User"
+  },
+  {
+   "role": "Projects Manager"
+  }
+ ],
+ "sequence_id": 40.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "PMIS Dashboard",
+   "link_to": "PMIS",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} In Month",
+   "label": "Timesheet Defaulter",
+   "link_to": "Timesheet Defaulter",
+   "stats_filter": "{\"date_for_which_hours_are_less\":[\"Timespan\",\"this month\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} To Submit",
+   "label": "Timesheet",
+   "link_to": "Timesheet",
+   "stats_filter": "{\"docstatus\":[\"=\",\"0\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Timesheet Ledger",
+   "link_to": "Timesheet Ledger",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Project Summary",
+   "link_to": "Project Summary",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Attendance Vs Timesheet",
+   "link_to": "Attendance vs Timesheet",
+   "type": "Report"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "format": "{} In Draft",
+   "label": "Project Allocation Bill",
+   "link_to": "Project Allocation Bill",
+   "stats_filter": "{\"docstatus\":[\"=\",\"0\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Project Risk",
+   "link_to": "Project Risk",
+   "type": "DocType"
+  }
+ ],
+ "title": "PMIS"
+}

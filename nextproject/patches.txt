@@ -1,0 +1,3 @@
+nextproject.nextproject.patches.v13_0.calculate_previous_tasks_duration
+nextproject.nextproject.patches.v13_0.custom_project_field
+#nextproject.nextproject.patches.v13_0.planed_hours

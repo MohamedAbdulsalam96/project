@@ -1,0 +1,240 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2023-12-11 23:05:36.521503",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_d6aj2",
+  "company",
+  "currency",
+  "column_break_rp0se",
+  "fiscal_year",
+  "column_break_cmdgu",
+  "bonus_periodicity",
+  "column_break_xtkpp",
+  "bonus_period_monthly",
+  "bonus_period_quarterly",
+  "bonus_period_half_yearly",
+  "computation_details_section",
+  "salary_component",
+  "performance_bonus_items",
+  "more_info_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PBS.MM..YY..##",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_d6aj2",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "mandatory_depends_on": "eval:doc.company",
+   "options": "Company",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rp0se",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cmdgu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "bonus_periodicity",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_preview": 1,
+   "label": "Bonus Periodicity",
+   "no_copy": 1,
+   "options": "\nMonthly\nQuarterly\nHalf Yearly\nYearly",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xtkpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "depends_on": "eval:doc.bonus_periodicity=='Monthly';",
+   "fieldname": "bonus_period_monthly",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Bonus Period",
+   "mandatory_depends_on": "eval:doc.bonus_periodicity=='Monthly';",
+   "no_copy": 1,
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "remember_last_selected_value": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "depends_on": "eval:doc.bonus_periodicity=='Quarterly';",
+   "fieldname": "bonus_period_quarterly",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_preview": 1,
+   "label": "Bonus Period",
+   "mandatory_depends_on": "eval:doc.bonus_periodicity=='Quarterly';",
+   "no_copy": 1,
+   "options": "\nJan-Mar\nApr-Jun\nJul-Sept\nOct-Dec",
+   "remember_last_selected_value": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "depends_on": "eval:doc.bonus_periodicity=='Half Yearly';",
+   "fieldname": "bonus_period_half_yearly",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_preview": 1,
+   "label": "Bonus Period",
+   "mandatory_depends_on": "eval:doc.bonus_periodicity=='Half Yearly';",
+   "no_copy": 1,
+   "options": "\nJan-Jun\nJul-Dec",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "computation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Computation Details"
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Salary Component",
+   "mandatory_depends_on": "eval:doc.company",
+   "options": "Salary Component",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "performance_bonus_items",
+   "fieldtype": "Table",
+   "label": "Performance Bonus Items",
+   "options": "Performance Bonus Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Performance Bonus",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "company.default_currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-07 18:24:34.005039",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Performance Bonus",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

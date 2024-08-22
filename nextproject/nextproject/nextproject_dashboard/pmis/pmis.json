@@ -1,0 +1,53 @@
+{
+ "cards": [
+  {
+   "card": "Tasks Overdue"
+  },
+  {
+   "card": "Total Projects Count"
+  },
+  {
+   "card": "Open Projects"
+  },
+  {
+   "card": "Avg. Completion"
+  },
+  {
+   "card": "Open Tasks"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Project by Lead",
+   "width": "Half"
+  },
+  {
+   "chart": "Project by Type",
+   "width": "Half"
+  },
+  {
+   "chart": "Project by Department",
+   "width": "Half"
+  },
+  {
+   "chart": "Project by Employee Group",
+   "width": "Half"
+  },
+  {
+   "chart": "Task overdue by Consultant",
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-04-16 11:51:18.747402",
+ "dashboard_name": "PMIS",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2024-04-16 11:51:18.747402",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "PMIS",
+ "owner": "Administrator"
+}

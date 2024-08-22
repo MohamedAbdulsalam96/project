@@ -1,0 +1,427 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-02-21 15:16:04.274839",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "naming_series",
+  "session_name",
+  "date",
+  "overall_status",
+  "column_break_2",
+  "priority",
+  "project",
+  "project_name",
+  "column_break_p84ge",
+  "session_type",
+  "task",
+  "task_subject",
+  "column_break_glfga",
+  "company",
+  "section_break_3",
+  "environment",
+  "column_break_5",
+  "environment_details",
+  "section_break_20",
+  "test_cases",
+  "test_case_result",
+  "git_release_tab",
+  "pull_request_info",
+  "base_branch",
+  "pull_request",
+  "column_break_gyvan",
+  "head_branch",
+  "column_break_gt1er",
+  "pull_request_title",
+  "description",
+  "section_break_ycjjx",
+  "git_release_info",
+  "product",
+  "release_title",
+  "column_break_18",
+  "product_version",
+  "git_released",
+  "column_break_exkd5",
+  "tags",
+  "section_break_d9hue",
+  "release_description",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TS-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Environment Details"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "\nCritical priority\nHigh priority\nMedium priority\nLow Priority\nLow\nMedium\nHigh\nUrgent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "label": "Environment",
+   "options": "\nInhouse Test Environment\nLive / Production Server\nTesting / Staging Server",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "GitHub Repository"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "product_version",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Test Session",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Test Session",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "session_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Session Type",
+   "options": "\nPlanned Testing Session\nBug Report Testing\nNew Product Release\nCustomization Release Testing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_cases",
+   "fieldtype": "Table",
+   "label": "Test Cases ",
+   "options": "Test Session Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Test Cases"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "git_release_tab",
+   "fieldtype": "Tab Break",
+   "label": "GitHub"
+  },
+  {
+   "fieldname": "column_break_exkd5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tags",
+   "fieldtype": "Long Text",
+   "label": "Available Tags",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "release_title",
+   "fieldtype": "Data",
+   "label": "Release Title"
+  },
+  {
+   "fieldname": "section_break_d9hue",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "<h2>What's Changed</h2>\n-----------------------------------------------------------------------",
+   "fieldname": "release_description",
+   "fieldtype": "Text Editor",
+   "label": "Release Description"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "session_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Session Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_p84ge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "URL:\nUID:\nPWD:",
+   "fieldname": "environment_details",
+   "fieldtype": "Small Text",
+   "label": "Environment Details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.project",
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Task",
+   "mandatory_depends_on": "eval:doc.project",
+   "options": "Task"
+  },
+  {
+   "fetch_from": "task.subject",
+   "fieldname": "task_subject",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Task Subject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_glfga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_case_result",
+   "fieldtype": "Table",
+   "label": "Test Case Result",
+   "options": "Session Result"
+  },
+  {
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "label": "Overall Status",
+   "options": "\nPASS\nFAIL",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "git_released",
+   "fieldtype": "Check",
+   "label": "Git Released",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.pull_request == 1",
+   "fieldname": "pull_request_title",
+   "fieldtype": "Data",
+   "label": "Pull Request Title"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "read_only_depends_on": "eval:doc.pull_request == 1"
+  },
+  {
+   "fieldname": "column_break_gyvan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "base_branch",
+   "fieldtype": "Data",
+   "label": "Base Branch",
+   "read_only_depends_on": "eval:doc.pull_request == 1"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "head_branch",
+   "fieldtype": "Data",
+   "label": "Head Branch",
+   "read_only_depends_on": "eval:doc.pull_request == 1"
+  },
+  {
+   "fieldname": "column_break_gt1er",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pull_request",
+   "fieldtype": "Check",
+   "label": "Pull Request - Open",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ycjjx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pull_request_info",
+   "fieldtype": "Heading",
+   "label": "Pull Request Info"
+  },
+  {
+   "fieldname": "git_release_info",
+   "fieldtype": "Heading",
+   "label": "Git Release Info"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-20 12:03:23.458139",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Test Session",
+ "naming_rule": "By \"Naming Series\" field",
+ "nsm_parent_field": "parent_test_session",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

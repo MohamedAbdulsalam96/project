@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_rename": 1,
+ "creation": "2023-12-26 13:18:20.557928",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "auto_submit_created_pip",
+  "pip_trigger_date",
+  "column_break_qwp5u",
+  "minimum_required_performance_score",
+  "column_break_fpq6d",
+  "performance_evaluation_periodicity"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.enabled==1",
+   "fieldname": "auto_submit_created_pip",
+   "fieldtype": "Check",
+   "label": "Auto Submit Created PIP"
+  },
+  {
+   "fieldname": "column_break_qwp5u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enabled==1",
+   "fieldname": "minimum_required_performance_score",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Minimum Required Performance Score",
+   "mandatory_depends_on": "eval:doc.enabled==1"
+  },
+  {
+   "fieldname": "column_break_fpq6d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enabled==1",
+   "fieldname": "performance_evaluation_periodicity",
+   "fieldtype": "Select",
+   "label": "Performance Evaluation Periodicity",
+   "mandatory_depends_on": "eval:doc.enabled==1",
+   "options": "\nMonthly\nQuarterly\nBi Yearly\nYearly"
+  },
+  {
+   "fieldname": "pip_trigger_date",
+   "fieldtype": "Int",
+   "label": "PIP Trigger Date (In Day)"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-07-11 18:48:11.560843",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "PIP Threshold",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

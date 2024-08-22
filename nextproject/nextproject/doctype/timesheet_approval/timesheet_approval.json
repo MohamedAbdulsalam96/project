@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "field:employee_name",
+ "creation": "2022-03-14 13:22:34.075907",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "select_employee",
+  "employee_name",
+  "column_break_aomvp",
+  "from_date",
+  "to_date",
+  "column_break_7",
+  "approver",
+  "approver_name",
+  "column_break_qcocq",
+  "company",
+  "project",
+  "section_break_12",
+  "fetch_timesheets",
+  "column_break_d0ep7",
+  "show_billing_info",
+  "timesheets_to_approve_section",
+  "timesheet_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "select_employee.leave_approver",
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Approver",
+   "options": "User"
+  },
+  {
+   "fetch_from": "approver.full_name",
+   "fieldname": "approver_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Approver Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_employee",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empoyee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "timesheet_details",
+   "fieldtype": "Table",
+   "label": "Timesheet Details",
+   "options": "Timesheet Line Details"
+  },
+  {
+   "fieldname": "fetch_timesheets",
+   "fieldtype": "Button",
+   "label": "Fetch Timesheets"
+  },
+  {
+   "fieldname": "column_break_aomvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qcocq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_d0ep7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timesheets_to_approve_section",
+   "fieldtype": "Section Break",
+   "label": "Timesheets To Approve"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_billing_info",
+   "fieldtype": "Check",
+   "label": "Show Billing Info"
+  }
+ ],
+ "hide_toolbar": 1,
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-12 16:15:04.028092",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Timesheet Approval",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2023-11-08 14:38:34.538704",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "primary_consultant",
+  "column_break_p9bwt",
+  "employee_group",
+  "primary_consultant_name",
+  "section_break_hhbrk",
+  "task_new",
+  "task_open",
+  "task_working",
+  "task_pending_review",
+  "task_overdue"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_group",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Team",
+   "options": "Employee Group"
+  },
+  {
+   "fieldname": "primary_consultant",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Primary Consultant",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_p9bwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "primary_consultant.employee_name",
+   "fieldname": "primary_consultant_name",
+   "fieldtype": "Data",
+   "label": "Primary Consultant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_hhbrk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task_pending_review",
+   "fieldtype": "Table",
+   "label": "Task Pending Review",
+   "options": "Task Pending Review"
+  },
+  {
+   "fieldname": "task_overdue",
+   "fieldtype": "Table",
+   "label": "Task Overdue",
+   "options": "Task Overdue"
+  },
+  {
+   "fieldname": "task_open",
+   "fieldtype": "Table",
+   "label": "Task Open",
+   "options": "Task Open"
+  },
+  {
+   "fieldname": "task_working",
+   "fieldtype": "Table",
+   "label": "Task Working",
+   "options": "Task Working"
+  },
+  {
+   "fieldname": "task_new",
+   "fieldtype": "Table",
+   "label": "Task New",
+   "options": "Task New"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-02-02 16:55:27.331461",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Task Completion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

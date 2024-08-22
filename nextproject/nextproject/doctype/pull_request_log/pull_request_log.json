@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-14 11:33:37.826802",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_ye9wu",
+  "product",
+  "base_branch",
+  "pull_request_title",
+  "column_break_duer7",
+  "pull_request_no",
+  "head_branch",
+  "description",
+  "column_break_q9nff",
+  "state",
+  "merge_pull_request_info_section",
+  "merge_title",
+  "column_break_6gban",
+  "merge_description",
+  "column_break_dtekc",
+  "merge_request_state",
+  "reference_info_section",
+  "reference_document_type",
+  "column_break_svha2",
+  "reference_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "base_branch",
+   "fieldtype": "Data",
+   "label": "Base Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "head_branch",
+   "fieldtype": "Data",
+   "label": "Head Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Data",
+   "label": "Product",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pull_request_title",
+   "fieldtype": "Data",
+   "label": "Pull Request Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_duer7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pull_request_no",
+   "fieldtype": "Data",
+   "label": "Pull Request No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_document_type",
+   "read_only": 1
+  },
+  {
+   "default": "Test Session",
+   "fieldname": "reference_document_type",
+   "fieldtype": "Link",
+   "label": "Reference Document Type",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_q9nff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "Pull Request State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PRL-.YY.-.####"
+  },
+  {
+   "fieldname": "section_break_ye9wu",
+   "fieldtype": "Section Break",
+   "label": "Pull Request Info"
+  },
+  {
+   "fieldname": "merge_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Merge Pull Request Title"
+  },
+  {
+   "fieldname": "merge_description",
+   "fieldtype": "Data",
+   "label": "Merge Pull Request Description"
+  },
+  {
+   "fieldname": "merge_pull_request_info_section",
+   "fieldtype": "Section Break",
+   "label": "Merge Pull Request Info"
+  },
+  {
+   "fieldname": "column_break_6gban",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dtekc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Open",
+   "fieldname": "merge_request_state",
+   "fieldtype": "Select",
+   "label": "Merge Pull Request State",
+   "options": "Open\nMerged",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_info_section",
+   "fieldtype": "Section Break",
+   "label": "Reference Info"
+  },
+  {
+   "fieldname": "column_break_svha2",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Error Pull Request Log",
+   "link_fieldname": "reference_name"
+  }
+ ],
+ "modified": "2024-02-19 19:12:39.688508",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Pull Request Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

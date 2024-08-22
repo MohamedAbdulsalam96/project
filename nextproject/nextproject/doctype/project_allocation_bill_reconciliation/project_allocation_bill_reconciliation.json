@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-13 14:36:29.393708",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "subject",
+  "allocation_in_hours",
+  "timesheet_hours",
+  "difference_in_hours"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fetch_from": "task.subject",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject"
+  },
+  {
+   "fieldname": "allocation_in_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Allocation (in hours)",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "timesheet_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Timesheet hours"
+  },
+  {
+   "fieldname": "difference_in_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Difference (in hours)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-03 21:15:28.078899",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Project Allocation Bill Reconciliation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

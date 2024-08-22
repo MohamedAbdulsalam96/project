@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-12 11:31:09.475621",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "column_break_hilkk",
+  "employee_name",
+  "score_details_section",
+  "target",
+  "column_break_8luwn",
+  "achieved",
+  "column_break_mxnfp",
+  "score",
+  "bonus_computation_section",
+  "maximum_amount",
+  "column_break_pd6ms",
+  "payable_amount"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hilkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_details_section",
+   "fieldtype": "Section Break",
+   "label": "Score Details"
+  },
+  {
+   "columns": 1,
+   "fieldname": "target",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Target",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8luwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "achieved",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Achieved",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mxnfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Score",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "bonus_computation_section",
+   "fieldtype": "Section Break",
+   "label": "Bonus Computation"
+  },
+  {
+   "columns": 2,
+   "fieldname": "maximum_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Maximum Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pd6ms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "payable_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payable Amount",
+   "options": "currency",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-07 18:25:56.377549",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Performance Bonus Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

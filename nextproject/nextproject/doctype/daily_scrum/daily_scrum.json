@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2023-09-22 02:42:46.968855",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "summary_tab",
+  "naming_series",
+  "team",
+  "team_mebers",
+  "column_break_rj9fs",
+  "date",
+  "lead",
+  "lead_name",
+  "column_break_4muhl",
+  "type",
+  "morning_scrum",
+  "company",
+  "section_break_96y87",
+  "get_team_details",
+  "team_scrum",
+  "get_lines",
+  "follow_up_scrum_items",
+  "scrum_details_tab",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DS.DD..MM..YY..##",
+   "reqd": 1
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Team",
+   "options": "Employee Group",
+   "print_width": "0",
+   "reqd": 1,
+   "width": "0"
+  },
+  {
+   "fieldname": "column_break_rj9fs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "team.group_lead",
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Lead",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "team.group_lead_name",
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lead Name"
+  },
+  {
+   "fieldname": "column_break_4muhl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "\nMorning\nEvening",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_96y87",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "depends_on": "eval:doc.type==\"Morning\"\neval:doc.type==\"Evining\"",
+   "fieldname": "team_scrum",
+   "fieldtype": "Table",
+   "label": "Items",
+   "mandatory_depends_on": "eval:doc.type==\"Morning\"\neval:doc.type==\"Evining\"",
+   "options": "Daily Scrum Item"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Evening\"",
+   "fieldname": "get_lines",
+   "fieldtype": "Button",
+   "label": "Get Follow-up Lines"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "depends_on": "eval:doc.type==\"Evening\"",
+   "fieldname": "follow_up_scrum_items",
+   "fieldtype": "Table",
+   "label": "Follow up Scrum Items",
+   "mandatory_depends_on": "eval:doc.type==\"Evening\"",
+   "options": "Follow up Scrum Items"
+  },
+  {
+   "fieldname": "scrum_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Scrum",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type==\"Morning\"",
+   "fieldname": "get_team_details",
+   "fieldtype": "Button",
+   "label": "Get Team Details"
+  },
+  {
+   "fieldname": "team_mebers",
+   "fieldtype": "Table MultiSelect",
+   "ignore_user_permissions": 1,
+   "label": "Attending Team Members",
+   "options": "Employee Scrum Table",
+   "read_only_depends_on": "eval:doc.type==\"Evening\"",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type==\"Evening\";",
+   "fieldname": "morning_scrum",
+   "fieldtype": "Link",
+   "label": "Morning Scrum",
+   "mandatory_depends_on": "eval:doc.type==\"Evening\"",
+   "options": "Daily Scrum"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Scrum Attendance",
+   "link_fieldname": "daily_scrum"
+  }
+ ],
+ "modified": "2024-05-27 17:38:25.834660",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Daily Scrum",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technical Team Lead",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

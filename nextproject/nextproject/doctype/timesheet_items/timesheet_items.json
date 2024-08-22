@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-28 10:38:33.590473",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "project_name",
+  "activity_type",
+  "column_break_4",
+  "task",
+  "subject",
+  "section_break_8",
+  "parent_task",
+  "allocationin_hours",
+  "from_time",
+  "column_break_11",
+  "time_spentin_hours",
+  "to_time",
+  "section_break_10",
+  "description",
+  "section_break_19",
+  "expected_end_date",
+  "completed_before",
+  "column_break_22",
+  "next_expected_end_date",
+  "timesheet",
+  "timesheet_line_id"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project ",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "task.subject",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "parent_task.task",
+   "fieldname": "parent_task",
+   "fieldtype": "Link",
+   "label": "Parent Task",
+   "options": "Task",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "allocationin_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Allocation(in hours)",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "time_spentin_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Time Spent(in hours)"
+  },
+  {
+   "columns": 1,
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "completed_before.task",
+   "fieldname": "completed_before",
+   "fieldtype": "Percent",
+   "label": "Task Progress",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "task.exp_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "next_expected_end_date",
+   "fieldtype": "Date",
+   "label": "New Expected End Date"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Datetime",
+   "label": "From Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Datetime",
+   "label": "To Time",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "activity_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "Activity Type",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "timesheet",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Timesheet ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "timesheet_line_id",
+   "fieldtype": "Data",
+   "label": "Timesheet Line ID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-04 10:47:11.260807",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Timesheet Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

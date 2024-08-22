@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-07-18 18:15:56.209053",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "project_name",
+  "column_break_zwa9e",
+  "billing_based_on",
+  "last_billing_date",
+  "next_billing_date",
+  "column_break_wzknw",
+  "status",
+  "project_currency",
+  "column_break_ezeqo",
+  "conversion_rate",
+  "section_break_2xoff",
+  "projected_amount",
+  "projected_costing_amount",
+  "column_break_vffrn",
+  "sales_invoice",
+  "invoiced_amount",
+  "column_break_m7w4d",
+  "base_projected_billing_amount",
+  "base_projected_costing_amount",
+  "consultant_details_section",
+  "consultant_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.billing_based_on",
+   "fieldname": "billing_based_on",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Billing Based on",
+   "options": "\nTimesheet Based\nMilestone Based\nFixed Recurring\nFree Of Charge\nAllocation Based",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zwa9e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wzknw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_billing_date",
+   "fieldtype": "Date",
+   "label": "Last Billing Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_billing_date",
+   "fieldtype": "Date",
+   "label": "Next Billing Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2xoff",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fieldname": "column_break_ezeqo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nPartially Billed\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vffrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_currency",
+   "fieldtype": "Data",
+   "label": "Project Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "base_projected_billing_amount",
+   "fieldtype": "Currency",
+   "label": "Base Projected Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "base_projected_costing_amount",
+   "fieldtype": "Currency",
+   "label": "Base Projected Costing Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_m7w4d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "projected_costing_amount",
+   "fieldtype": "Currency",
+   "label": "Projected Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "projected_amount",
+   "fieldtype": "Currency",
+   "label": "Projected Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "no_copy": 1,
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Invoiced Amount",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Conversion Rate"
+  },
+  {
+   "fieldname": "consultant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Consultant Details"
+  },
+  {
+   "fieldname": "consultant_details",
+   "fieldtype": "Table",
+   "label": "Project Revenue Projection Items",
+   "options": "Project Revenue Projection Items"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-10 16:59:04.204747",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Project Revenue Projection",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

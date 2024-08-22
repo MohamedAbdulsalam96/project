@@ -1,0 +1,374 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2023-12-19 22:38:29.137287",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_pnkjf",
+  "project",
+  "project_name",
+  "column_break_w2cjg",
+  "primary_task_affected",
+  "task_subject",
+  "column_break_c4arc",
+  "reported_by",
+  "reporter_name",
+  "column_break_werto",
+  "reporting_date",
+  "department",
+  "column_break_7jn33",
+  "status",
+  "company",
+  "risk_details_tab",
+  "risk_description",
+  "column_break_qd5ed",
+  "mitigation_plan",
+  "column_break_3zyq4",
+  "likelihood",
+  "risk_rating",
+  "impact",
+  "delivery_delayed",
+  "project_team_info_section",
+  "employee_group",
+  "project_type",
+  "column_break_3zfkq",
+  "primary_consultant",
+  "primary_consultant_name",
+  "column_break_0vfnx",
+  "project_lead",
+  "project_lead_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RSK.MM..YY..##",
+   "print_hide": 1,
+   "report_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pnkjf",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "column_break_w2cjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_task_affected",
+   "fieldtype": "Link",
+   "label": "Primary Task Affected",
+   "options": "Task",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "primary_task_affected.subject",
+   "fieldname": "task_subject",
+   "fieldtype": "Data",
+   "label": "Task Subject"
+  },
+  {
+   "fieldname": "column_break_c4arc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Reported By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "reported_by.employee_name",
+   "fieldname": "reporter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Reporter's Name"
+  },
+  {
+   "fieldname": "column_break_werto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reporting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Reporting Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "column_break_7jn33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Risk Reported\nIn Progress\nRisk Mitigated\nProject Held\nTask Cancelled\nProject Cancelled\nResource Replaced\nEmployee Group Replaced",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_details_tab",
+   "fieldtype": "Section Break",
+   "label": "Risk Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "risk_description",
+   "fieldtype": "Text Editor",
+   "label": "Risk Description",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qd5ed",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mitigation_plan",
+   "fieldtype": "Text Editor",
+   "label": "Mitigation Plan",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3zyq4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "description": "Select on a scale of 5. 0 being is least likely and 5 being almost certain to happen.",
+   "fieldname": "likelihood",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Likelihood",
+   "options": "\n0\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "description": "Select on a scale of 5. 0 - Low Risk & 5 - High Risk",
+   "fieldname": "risk_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Risk Rating",
+   "options": "\n0\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "description": "Select on a scale of 5. 0 - Low import & 5 - High Impact",
+   "fieldname": "impact",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Impact",
+   "options": "\n0\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_delayed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Could it cause delay to the delivery?",
+   "options": "\nNo\nYes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_team_info_section",
+   "fieldtype": "Tab Break",
+   "label": "Project Team Info"
+  },
+  {
+   "fetch_from": "project.employee_group",
+   "fieldname": "employee_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Group",
+   "options": "Employee Group",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_type",
+   "fieldname": "project_type",
+   "fieldtype": "Link",
+   "label": "Project Type",
+   "options": "Project Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3zfkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.primary_consultant",
+   "fieldname": "primary_consultant",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Primary Consultant",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "primary_consultant.employee_name",
+   "fieldname": "primary_consultant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Primary Consultant Name",
+   "read_only": 1,
+   "reqd": 0
+  },
+  {
+   "fieldname": "column_break_0vfnx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_lead",
+   "fieldname": "project_lead",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project Lead",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project_lead.employee_name",
+   "fieldname": "project_lead_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Project Lead Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Risk",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-19 22:38:29.137287",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Project Risk",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-02 12:14:54.814086",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "d_restrict",
+  "section_break_2",
+  "timesheet_settings_items",
+  "role_allowed_for_overage_timesheet",
+  "timesheet_defaulter_tab",
+  "min_timesheet_hours",
+  "email_template",
+  "timesheet_defaulter_in_days",
+  "project_settings_tab",
+  "max_end_date_changes_allowed",
+  "role_allowed_to_override_date_change_validation"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "d_restrict",
+   "fieldtype": "Check",
+   "label": "Restrict Backdated Timesheets"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "timesheet_settings_items",
+   "fieldtype": "Table",
+   "label": "Timesheet Settings Items",
+   "options": "Timesheets Settings"
+  },
+  {
+   "fieldname": "min_timesheet_hours",
+   "fieldtype": "Float",
+   "label": "Min Timesheet Hours"
+  },
+  {
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "label": "Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "timesheet_defaulter_tab",
+   "fieldtype": "Tab Break",
+   "label": "TImesheet Defaulter"
+  },
+  {
+   "description": "In Days",
+   "fieldname": "timesheet_defaulter_in_days",
+   "fieldtype": "Int",
+   "label": "Timesheet Defaulter(In Days)"
+  },
+  {
+   "fieldname": "role_allowed_for_overage_timesheet",
+   "fieldtype": "Link",
+   "label": "Role Allowed for Overage Timesheet",
+   "options": "Role"
+  },
+  {
+   "fieldname": "project_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project Settings"
+  },
+  {
+   "description": "If set to \"0\", then no limit",
+   "fieldname": "max_end_date_changes_allowed",
+   "fieldtype": "Int",
+   "label": "Max End Date Changes Allowed"
+  },
+  {
+   "fieldname": "role_allowed_to_override_date_change_validation",
+   "fieldtype": "Link",
+   "label": "Role Allowed to Override Date Change Validation",
+   "options": "Role"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-04-24 16:32:34.714434",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Timesheet Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-20 15:16:18.721883",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_id",
+  "status",
+  "primary_consultant",
+  "expected_end_date",
+  "expected_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task ID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "primary_consultant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Primary Consultant"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "expected_time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-02 18:44:26.731720",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Task Information",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-10 16:26:05.182156",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "primary_consultant",
+  "primary_consultant_name",
+  "task",
+  "hours",
+  "costing_rate",
+  "cost_amount",
+  "billing_rate",
+  "bill_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "primary_consultant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Primary Consultant",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "primary_consultant.employee_name",
+   "fieldname": "primary_consultant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Primary Consultant Name"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours"
+  },
+  {
+   "fieldname": "costing_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Costing Rate"
+  },
+  {
+   "fieldname": "cost_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Amount"
+  },
+  {
+   "fieldname": "billing_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Billing Rate"
+  },
+  {
+   "fieldname": "bill_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Bill Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-11 15:27:15.766471",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Project Revenue Projection Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

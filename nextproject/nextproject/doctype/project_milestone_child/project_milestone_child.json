@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "creation": "2020-10-12 15:43:19.853626",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "milestone",
+  "type",
+  "billing_percentage",
+  "billing_fixed_amount",
+  "invoice",
+  "s_order",
+  "progress",
+  "billing_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "milestone",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Milestone",
+   "options": "Task",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type==\"Percentage\"",
+   "fieldname": "billing_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Billing Percentage",
+   "mandatory_depends_on": "eval:doc.type==\"Percentage\""
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Progress"
+  },
+  {
+   "fieldname": "billing_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Billing Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "s_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Percentage\nFixed Amount"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Fixed Amount\"",
+   "fieldname": "billing_fixed_amount",
+   "fieldtype": "Currency",
+   "label": "Billing Fixed Amount",
+   "mandatory_depends_on": "eval:doc.type==\"Fixed Amount\""
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-17 12:36:39.504005",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Project Milestone Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

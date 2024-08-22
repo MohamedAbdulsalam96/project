@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-21 15:16:06.573428",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "test_case",
+  "subject",
+  "column_break_47cbo",
+  "estimated_work",
+  "status",
+  "section_break_aoz1p",
+  "steps_followed",
+  "column_break_3t6v0",
+  "expected_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": " Test case",
+   "options": "Test Case",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPASS\nFAIL"
+  },
+  {
+   "fetch_from": "test_case.subject",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "test_case.estimated_work",
+   "fieldname": "estimated_work",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "label": "Estimated Work",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_47cbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aoz1p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "test_case.result",
+   "fieldname": "steps_followed",
+   "fieldtype": "Text Editor",
+   "label": "Steps Followed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3t6v0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "test_case.expected_result",
+   "fieldname": "expected_result",
+   "fieldtype": "Text Editor",
+   "label": "Expected Result",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-11 00:53:38.398876",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Test Session Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

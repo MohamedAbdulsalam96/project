@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-22 02:40:48.144227",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member",
+  "merber_name",
+  "ignore_timesheet_check",
+  "column_break_7r2xo",
+  "project_name",
+  "current_task",
+  "subject",
+  "column_break_k8622",
+  "status",
+  "old_status",
+  "progress_status",
+  "task_details",
+  "timesheet",
+  "column_break_zzhnj",
+  "notes",
+  "section_break_fug6b",
+  "update_status",
+  "open",
+  "working",
+  "pending_review",
+  "completed",
+  "cancelled",
+  "help",
+  "column_break_ixsfg",
+  "update_end_date",
+  "on_track",
+  "new_end_date",
+  "expected_end_date",
+  "update_start_date",
+  "expected_start_date",
+  "evening_notes",
+  "column_break_c0vie",
+  "what_next",
+  "task_completed",
+  "next_task"
+ ],
+ "fields": [
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7r2xo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "merber_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name"
+  },
+  {
+   "fieldname": "current_task",
+   "fieldtype": "Link",
+   "label": "Current Task",
+   "options": "Task",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "current_task.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zzhnj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "current_task.exp_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Existing End Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "depends_on": "eval:doc.task_completed==0",
+   "fieldname": "on_track",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Still on Track?",
+   "mandatory_depends_on": "eval:doc.task_completed==0"
+  },
+  {
+   "depends_on": "eval:doc.on_track==0 && doc.task_completed==0",
+   "fieldname": "new_end_date",
+   "fieldtype": "Date",
+   "label": "What is the new delivery date?"
+  },
+  {
+   "fieldname": "column_break_c0vie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "task_completed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is the Task Completed?"
+  },
+  {
+   "fieldname": "next_task",
+   "fieldtype": "Link",
+   "label": "What is the next Task",
+   "options": "Task"
+  },
+  {
+   "columns": 1,
+   "fieldname": "timesheet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Timesheet",
+   "options": "Timesheet"
+  },
+  {
+   "columns": 2,
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "current_task.subject",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "current_task.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_fug6b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "progress_status",
+   "fieldtype": "Select",
+   "label": "Progress Status",
+   "options": "Green\nOrange\nRed"
+  },
+  {
+   "fieldname": "column_break_k8622",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Working\" || doc.status==\"New\"",
+   "fieldname": "open",
+   "fieldtype": "Button",
+   "label": "Open"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Open\" || doc.status==\"Pending Review\" || doc.status==\"Overdue\"",
+   "fieldname": "working",
+   "fieldtype": "Button",
+   "label": "Working"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Working\" || doc.status==\"Pending Review\"",
+   "fieldname": "pending_review",
+   "fieldtype": "Button",
+   "label": "Pending Review"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Working\" || doc.status==\"Pending Review\" || doc.status==\"Overdue\"",
+   "fieldname": "completed",
+   "fieldtype": "Button",
+   "label": "Completed"
+  },
+  {
+   "fieldname": "cancelled",
+   "fieldtype": "Button",
+   "label": "Cancelled"
+  },
+  {
+   "default": "0",
+   "fieldname": "ignore_timesheet_check",
+   "fieldtype": "Check",
+   "label": "Ignore Timesheet Check"
+  },
+  {
+   "fieldname": "update_status",
+   "fieldtype": "Heading",
+   "label": "Update Status"
+  },
+  {
+   "fieldname": "help",
+   "fieldtype": "HTML",
+   "options": "<h2><u><em><strong>Help:</strong></em></u></h2>\n<p><em>Click on the button above to change the status of the task as mentioned on the button itself.</em></p>"
+  },
+  {
+   "fieldname": "update_end_date",
+   "fieldtype": "Heading",
+   "label": "Update End Date"
+  },
+  {
+   "fieldname": "what_next",
+   "fieldtype": "Heading",
+   "label": "What Next?"
+  },
+  {
+   "fieldname": "column_break_ixsfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "old_status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Old Status"
+  },
+  {
+   "fieldname": "task_details",
+   "fieldtype": "Button",
+   "label": "Task Details"
+  },
+  {
+   "fieldname": "evening_notes",
+   "fieldtype": "Small Text",
+   "label": "Evening Notes"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Open\"",
+   "fieldname": "update_start_date",
+   "fieldtype": "Date",
+   "label": "Update Start Date"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Open\"",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-03 16:57:29.644284",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Follow up Scrum Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: nextproject
+Version: 0.0.1
+Summary: nextproject
+Author: Dexciss
+Author-email: nextproject@dexciss.com
+Requires-Dist: frappe
+Requires-Dist: pandas

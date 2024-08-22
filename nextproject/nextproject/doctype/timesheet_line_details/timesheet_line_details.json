@@ -1,0 +1,226 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-14 16:13:22.285606",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_type",
+  "project",
+  "section_break_3",
+  "timesheet",
+  "section_break_5",
+  "task",
+  "subject",
+  "expected_time",
+  "time_already_spent",
+  "remaining_time",
+  "column_break_19",
+  "progress",
+  "date",
+  "timesheet_duration",
+  "project_currency",
+  "column_break_20",
+  "timesheet_hrs",
+  "billing_hrs",
+  "billing_rate",
+  "column_break_21",
+  "billing_amount",
+  "timesheet_line_id",
+  "time_justification",
+  "section_break_22",
+  "is_billable",
+  "approve"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Link",
+   "label": "Activity Type",
+   "options": "Activity Type",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fetch_from": "task.expected_time",
+   "fieldname": "expected_time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Time"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "remaining_time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Remaining Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "options": "Timesheet",
+   "read_only": 1
+  },
+  {
+   "fieldname": "timesheet_duration",
+   "fieldtype": "Duration",
+   "label": "Timesheet Duration",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.currency",
+   "fieldname": "project_currency",
+   "fieldtype": "Link",
+   "label": "Project Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "timesheethrs",
+   "fieldname": "timesheet_hrs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Timesheet Hrs"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "is_billable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Billable"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "timesheet_line_id.billing_hours",
+   "fieldname": "billing_hrs",
+   "fieldtype": "Float",
+   "label": "Billing hrs"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "billing_rate",
+   "fieldtype": "Currency",
+   "label": "Billing Rate"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "billing_amount",
+   "fieldtype": "Currency",
+   "label": "Billing amount"
+  },
+  {
+   "fieldname": "timesheet_line_id",
+   "fieldtype": "Link",
+   "label": "Timesheet Line ID",
+   "options": "Timesheet Detail",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "task.actual_time",
+   "fieldname": "time_already_spent",
+   "fieldtype": "Float",
+   "label": "Time Already Spent"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fetch_from": "task.progress",
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Progress"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "timesheet",
+   "fieldtype": "Link",
+   "label": "Timesheet",
+   "options": "Timesheet",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "approve",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Approve"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fetch_from": "task.subject",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "timesheet_line_id.description",
+   "fieldname": "time_justification",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Time Justification"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-09 00:33:04.398030",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Timesheet Line Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,309 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2023-10-17 12:36:34.970111",
+ "default_view": "List",
+ "description": "Use this doctype to define variables and their targets for each individual employee.",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "employee_details_section",
+  "employee",
+  "employee_name",
+  "column_break_ksq2",
+  "fiscal_year",
+  "company",
+  "image",
+  "column_break_51bl",
+  "department",
+  "designation",
+  "column_break_wizq",
+  "disabled",
+  "reports_to",
+  "rm_name",
+  "section_break_xptjm",
+  "bonus_paid",
+  "column_break_w68yc",
+  "annual_bonus",
+  "maximum_allowed_score_in_lines",
+  "column_break_87vgd",
+  "maximum_score_allowed",
+  "more_info_section",
+  "performance_target_variable_items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "PTV.MM..YY..##",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ksq2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Employee Name",
+   "no_copy": 1
+  },
+  {
+   "fetch_from": "employee.image",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_51bl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "no_copy": 1,
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Designation",
+   "no_copy": 1,
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_wizq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.reports_to",
+   "fieldname": "reports_to",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Reports To",
+   "no_copy": 1,
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "reports_to.employee_name",
+   "fieldname": "rm_name",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "in_preview": 1,
+   "label": "Reporting Manager's Name",
+   "mandatory_depends_on": "eval:doc.report_to",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "Target"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "performance_target_variable_items",
+   "fieldtype": "Table",
+   "ignore_user_permissions": 1,
+   "label": "Performance Target Variable Items",
+   "options": "Performance Target Variable Items",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bonus_paid",
+   "fieldtype": "Check",
+   "label": "Is bonus to be paid "
+  },
+  {
+   "depends_on": "eval:doc.bonus_paid==1;",
+   "fieldname": "annual_bonus",
+   "fieldtype": "Currency",
+   "label": "Annual Bonus"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Performance Target Variable",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xptjm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "column_break_w68yc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.bonus_paid==1;",
+   "fieldname": "maximum_score_allowed",
+   "fieldtype": "Float",
+   "label": "Maximum Score Allowed"
+  },
+  {
+   "fieldname": "column_break_87vgd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_allowed_score_in_lines",
+   "fieldtype": "Float",
+   "label": "Maximum Allowed Score In Lines"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-09 23:58:45.324791",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Performance Target Variable",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee,employee_name,reports_to, rm_name",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-02-19 15:37:04.989816",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "seen",
+  "reference_doctype",
+  "column_break_pnqee",
+  "reference_name",
+  "section_break_ff0ae",
+  "method",
+  "error"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "seen",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Seen"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_doctype",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error",
+   "fieldtype": "Code",
+   "label": "Error",
+   "read_only": 1
+  },
+  {
+   "default": "Pull Request Log",
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reference DocType",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pnqee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ff0ae",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "read_only": 1
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-20 10:49:00.830937",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Error Pull Request Log",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "method"
+}

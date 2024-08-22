@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-03 18:33:50.214957",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project_allocation_bill",
+  "from_date",
+  "to_date",
+  "unreconciled_hrs"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_allocation_bill",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Allocation Bill"
+  },
+  {
+   "fieldname": "unreconciled_hrs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Unreconciled Hrs"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-25 14:48:37.912242",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Unreconciled Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

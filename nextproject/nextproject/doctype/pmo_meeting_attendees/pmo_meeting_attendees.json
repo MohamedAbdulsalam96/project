@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-22 17:23:45.439053",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contact_person",
+  "first_name",
+  "last_name",
+  "designation",
+  "email_address",
+  "mobile_no",
+  "present"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contact Person",
+   "options": "Contact",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "contact_person.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "contact_person.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "contact_person.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "contact_person.email_id",
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "contact_person.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile No",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "present",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Present in Meeting?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-03 15:04:44.999654",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "PMO Meeting Attendees",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

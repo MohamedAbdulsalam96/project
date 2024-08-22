@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TI.####",
+ "creation": "2022-04-06 09:57:24.566162",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "character"
+ ],
+ "fields": [
+  {
+   "fieldname": "character",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Character                        "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-06 13:25:31.967088",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Timesheets Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

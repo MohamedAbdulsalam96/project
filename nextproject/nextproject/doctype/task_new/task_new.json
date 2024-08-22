@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-02-01 12:14:14.415667",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_id",
+  "subject",
+  "project_name",
+  "show_details",
+  "column_break_0onaf",
+  "start_date",
+  "end_date",
+  "open"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "task_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task ID",
+   "options": "Task"
+  },
+  {
+   "columns": 2,
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject"
+  },
+  {
+   "columns": 2,
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "bold": 1,
+   "columns": 1,
+   "fieldname": "open",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Mark Open"
+  },
+  {
+   "fieldname": "column_break_0onaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "show_details",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Show Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-08 12:54:15.043347",
+ "modified_by": "Administrator",
+ "module": "Nextproject",
+ "name": "Task New",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
